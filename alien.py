@@ -3,7 +3,7 @@ from pygame.sprite import Sprite
 
 class Alien(Sprite):
 	"""a class to represent a single alien in the fleet."""
-	
+
 	def __init__(self, ai_settings, screen):
 		"""initialize the alien and set its starting position"""
 		super(Alien, self).__init__()
@@ -17,14 +17,14 @@ class Alien(Sprite):
 		# ~ start each new alien near the top left of screensize
 		self.rect.x = self.rect.width
 		self.rect.y = self.rect .height
-		
+
 		# ~ store the alien's exact positon
 		self.x = float(self.rect.x)
 
 
 	def update(self):
 		"""move the alien left or right"""
-		self.x += (self.ai_settings.alien_speed_factor * 
+		self.x += (self.ai_settings.alien_speed_factor *
 			self.ai_settings.fleet_direction)
 		self.rect.x = self.x
 

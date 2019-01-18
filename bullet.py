@@ -1,5 +1,5 @@
 import pygame
-from pygame.sprite import Sprite 
+from pygame.sprite import Sprite
 
 class Bullet(Sprite):
 	"""a class to manage bullets fired from the ship"""
@@ -10,7 +10,7 @@ class Bullet(Sprite):
 		self.screen = screen
 
 		# ~ create a bullet rect at (0, 0) and then set correct position
-		self.rect = pygame.Rect(0, 0, ai_settings.bullet_width, 
+		self.rect = pygame.Rect(0, 0, ai_settings.bullet_width,
 			ai_settings.bullet_height)
 		self.rect.centerx = ship.rect.centerx
 		self.rect.top = ship.rect.top
